@@ -2,6 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bayu.basicpermission">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--    Meminta izin untuk membaca external storage di api 28 ke bawah atau android 9 ke bawah-->
+    <!--    selain itu tidak memrlukan izin-->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!--    Meminta izin untuk device degan api 23 ke atas atau android marshmallow ke atas-->
+    <!--    selain itu tidak usah memrlukan izin-->
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--    Meminta izin untuk mengakses kamera-->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--    Apakah device menginstall aplikasi ini harus mempunyai kamera, default true. Disini kita ubah menjadi false karena fungsional aplikasi masih dapat berjalan bahkan tandap adanya camera atau optional-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
