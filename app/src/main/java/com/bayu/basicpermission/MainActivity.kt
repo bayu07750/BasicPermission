@@ -1,6 +1,7 @@
 package com.bayu.basicpermission
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnOpenFile.setOnClickListener {
             openFile()
         }
+        binding.btnGoToSecondActivity.setOnClickListener {
+            Intent(this, SecondActivity::class.java).also { startActivity(it) }
+        }
     }
 
     private fun openFile() {
@@ -49,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 )
             ) {
                 // jisa harus, tampilkan alasannya
-                    // berikan dialog
+                // berikan dialog
                 Toast.makeText(this, "This app require permission", Toast.LENGTH_SHORT).show()
                 requestPermission()
             } else {
