@@ -4,4 +4,4 @@ Contoh bagaiman meminta permission di android menggunakan `registerForActivityFo
 
 [MainActivity](https://github.com/bayu07750/BasicPermission/blob/master/app/src/main/java/com/bayu/basicpermission/MainActivity.kt) 
 
-#### [SecondActivity](https://github.com/bayu07750/BasicPermission/blob/master/app/src/main/java/com/bayu/basicpermission/SecondActivity.kt) 
+[SecondActivity](https://github.com/bayu07750/BasicPermission/blob/master/app/src/main/java/com/bayu/basicpermission/SecondActivity.kt) 
